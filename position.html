@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #parent{
+            position: relative;
+            border: solid black;
+            width: 200vw;
+            height:200vh;
+            display: inline-block;
+            margin: 200px;
+            
+            font-size: 16px;
+            background-image: linear-gradient(orange,white,green);
+            box-sizing: border-box;
+        }
+        #static{
+            position: static; /*default*/
+            font-size: 1em;
+            border-radius: 5px;
+            background-image: conic-gradient(red,green);
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 1px 1px  pink,-1px -1px  pink;
+        }
+        #Relative{        
+            position: Relative;
+            top: 30px;  /*Relative to its original position*/
+            font-size: 1em;
+            border-radius: 5px;
+            background-image: conic-gradient(red,green);
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 1px 1px  pink,-1px -1px  pink;
+        } 
+        #Fixed{        
+            position: Fixed;
+            top: 40px;
+            left: 1px;
+            font-size: 1em;
+            border-radius: 5px;
+            background-image: conic-gradient(red,green);
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 1px 1px  pink,-1px -1px  pink;
+        }   
+        #Absolute{                     
+            position: Absolute; /*Relative to its nearest relative parent*/
+            top: 50px;
+            left: 3px;
+            font-size: 1em;
+            border-radius: 5px;
+            background-image: conic-gradient(red,green);
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 1px 1px  rgb(189, 119, 131),-1px -1px  pink;
+        }   
+        #Sticky{        
+            position: sticky;
+            top: 10px;
+            left: 400px;
+   
+            font-size: 1em;
+            border-radius: 5px;
+            background-image: conic-gradient(red,green);
+            box-sizing: border-box;
+            padding: 7px;
+            box-shadow: 1px 1px  pink,-1px -1px  pink;
+            text-shadow: 2px 2px 7px blueviolet;
+        }                                 
+        body{
+            color: white;
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <span id="static">
+        static
+    </span>
+    <span id="Relative">
+        Relative
+      </span>       
+      <span id="Fixed">
+        Fixed
+      </span> 
+
+ 
+    <span id="parent">
+      
+        <span id="Absolute">
+            Absolute
+          </span>     
+          <span id="Sticky">
+            Sticky
+          </span>   
+          
+    </span>
+</body>
+</html>
